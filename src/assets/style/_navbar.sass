@@ -1,0 +1,83 @@
+.navbar
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  font-family: $main-font-family
+  align-items: center
+  background: transparent
+  &-logo
+    width: 220px
+    height: 53px
+    &__img
+      width: 118px
+      height: 53px
+      color: white
+      fill: white
+      cursor: pointer
+  &-search
+    width: 45%
+    position: relative
+    border: none
+    border-radius: 35px
+    overflow: hidden
+    height: 40px
+    &__input
+      width: 100%
+      height: 100%
+      padding: 8px 45px 8px 26px
+      border: none
+      outline: none
+      border-radius: 35px
+      background: linear-gradient(0deg,rgba(255,255,255,.3),rgba(255,255,255,.3))
+      color: $main-text-color
+      font-size: 16px
+      &:focus
+        background: linear-gradient(0deg,rgba(255,255,255,1),rgba(255,255,255,1))
+        color: black
+      &:focus + .navbar-search__btn
+        background: url('../../assets/img/icons/search2.svg') no-repeat
+    &__btn
+      position: absolute
+      right: 16px
+      background: url('../../assets/img/icons/search.svg') no-repeat
+      width: 24px
+      height: 25px
+      top: 50%
+      display: block
+      transform: translateY(-50%) scale(-1, 1)
+      outline: none
+      border: none
+  &-navigate
+    display: flex
+    flex-direction: row
+    align-items: center
+    &__btn
+      border-radius: 50px
+      cursor: pointer
+      text-transform: uppercase
+      letter-spacing: 1px
+      display: inline-block
+      padding: 10px 12px 7px
+      line-height: 1.2
+      font-size: 16px
+      transition: .3s
+      border: 2px solid rgba(255,255,255,.5)
+      color: white
+      font-weight: 600
+      z-index: 10
+      font-family: "TT Milks", sans-serif
+      background: transparent
+      &:hover
+        background: $main-text-color
+        color: #000
+      &__active
+        background: $main-text-color
+        color: #000
+    &__img
+      width: 30px
+      height: 30px
+      margin-left: 27px
+      fill: white
+      cursor: pointer
+      z-index: 10
+      background: none

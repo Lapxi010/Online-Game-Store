@@ -1,0 +1,504 @@
+@font-face {
+    font-family: 'TT Milks';
+    src: url('../fonts/TTMilks-Light.eot');
+    src: local('TT Milks Light'), local('TTMilks-Light'),
+        url('../fonts/TTMilks-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilks-Light.woff2') format('woff2'),
+        url('../fonts/TTMilks-Light.woff') format('woff'),
+        url('../fonts/TTMilks-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks Script';
+    src: url('../fonts/TTMilksScript-Regular.eot');
+    src: local('TT Milks Script Regular'), local('TTMilksScript-Regular'),
+        url('../fonts/TTMilksScript-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilksScript-Regular.woff2') format('woff2'),
+        url('../fonts/TTMilksScript-Regular.woff') format('woff'),
+        url('../fonts/TTMilksScript-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks Casual 900 Three';
+    src: url('../fonts/TTMilksCasual-900Three.eot');
+    src: local('TT Milks Casual 900 Three'), local('TTMilksCasual-900Three'),
+        url('../fonts/TTMilksCasual-900Three.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilksCasual-900Three.woff2') format('woff2'),
+        url('../fonts/TTMilksCasual-900Three.woff') format('woff'),
+        url('../fonts/TTMilksCasual-900Three.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks';
+    src: url('../fonts/TTMilks-BoldItalic.eot');
+    src: local('TT Milks Bold Italic'), local('TTMilks-BoldItalic'),
+        url('../fonts/TTMilks-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilks-BoldItalic.woff2') format('woff2'),
+        url('../fonts/TTMilks-BoldItalic.woff') format('woff'),
+        url('../fonts/TTMilks-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Milks';
+    src: url('../fonts/TTMilks-LightItalic.eot');
+    src: local('TT Milks Light Italic'), local('TTMilks-LightItalic'),
+        url('../fonts/TTMilks-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilks-LightItalic.woff2') format('woff2'),
+        url('../fonts/TTMilks-LightItalic.woff') format('woff'),
+        url('../fonts/TTMilks-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Milks Casual Outline Shadow';
+    src: url('../fonts/TTMilksCasualOutline-Shadow.eot');
+    src: local('TT Milks Casual Outline Shadow'), local('TTMilksCasualOutline-Shadow'),
+        url('../fonts/TTMilksCasualOutline-Shadow.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilksCasualOutline-Shadow.woff2') format('woff2'),
+        url('../fonts/TTMilksCasualOutline-Shadow.woff') format('woff'),
+        url('../fonts/TTMilksCasualOutline-Shadow.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks Casual Shadow Three';
+    src: url('../fonts/TTMilksCasualShadow-Three.eot');
+    src: local('TT Milks Casual Shadow Three'), local('TTMilksCasualShadow-Three'),
+        url('../fonts/TTMilksCasualShadow-Three.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilksCasualShadow-Three.woff2') format('woff2'),
+        url('../fonts/TTMilksCasualShadow-Three.woff') format('woff'),
+        url('../fonts/TTMilksCasualShadow-Three.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks Casual Script One';
+    src: url('../fonts/TTMilksCasualScript-One.eot');
+    src: local('TT Milks Casual Script One'), local('TTMilksCasualScript-One'),
+        url('../fonts/TTMilksCasualScript-One.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilksCasualScript-One.woff2') format('woff2'),
+        url('../fonts/TTMilksCasualScript-One.woff') format('woff'),
+        url('../fonts/TTMilksCasualScript-One.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks';
+    src: url('../fonts/TTMilks-Regular.eot');
+    src: local('TT Milks Regular'), local('TTMilks-Regular'),
+        url('../fonts/TTMilks-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilks-Regular.woff2') format('woff2'),
+        url('../fonts/TTMilks-Regular.woff') format('woff'),
+        url('../fonts/TTMilks-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks';
+    src: url('../fonts/TTMilks-Italic.eot');
+    src: local('TT Milks Italic'), local('TTMilks-Italic'),
+        url('../fonts/TTMilks-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilks-Italic.woff2') format('woff2'),
+        url('../fonts/TTMilks-Italic.woff') format('woff'),
+        url('../fonts/TTMilks-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Milks Casual Pie Line';
+    src: url('../fonts/TTMilksCasualPie-Line.eot');
+    src: local('TT Milks Casual Pie Line'), local('TTMilksCasualPie-Line'),
+        url('../fonts/TTMilksCasualPie-Line.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilksCasualPie-Line.woff2') format('woff2'),
+        url('../fonts/TTMilksCasualPie-Line.woff') format('woff'),
+        url('../fonts/TTMilksCasualPie-Line.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks Casual Outline';
+    src: url('../fonts/TTMilksCasualOutline.eot');
+    src: local('TT Milks Casual Outline'), local('TTMilksCasualOutline'),
+        url('../fonts/TTMilksCasualOutline.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilksCasualOutline.woff2') format('woff2'),
+        url('../fonts/TTMilksCasualOutline.woff') format('woff'),
+        url('../fonts/TTMilksCasualOutline.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks';
+    src: url('../fonts/TTMilks-ExtraBoldItalic.eot');
+    src: local('TT Milks ExtraBold Italic'), local('TTMilks-ExtraBoldItalic'),
+        url('../fonts/TTMilks-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilks-ExtraBoldItalic.woff2') format('woff2'),
+        url('../fonts/TTMilks-ExtraBoldItalic.woff') format('woff'),
+        url('../fonts/TTMilks-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Milks Casual 700 Three';
+    src: url('../fonts/TTMilksCasual-700Three.eot');
+    src: local('TT Milks Casual 700 Three'), local('TTMilksCasual-700Three'),
+        url('../fonts/TTMilksCasual-700Three.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilksCasual-700Three.woff2') format('woff2'),
+        url('../fonts/TTMilksCasual-700Three.woff') format('woff'),
+        url('../fonts/TTMilksCasual-700Three.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks Script';
+    src: url('../fonts/TTMilksScript-Light.eot');
+    src: local('TT Milks Script Light'), local('TTMilksScript-Light'),
+        url('../fonts/TTMilksScript-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilksScript-Light.woff2') format('woff2'),
+        url('../fonts/TTMilksScript-Light.woff') format('woff'),
+        url('../fonts/TTMilksScript-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks Casual Shadow Inline';
+    src: url('../fonts/TTMilksCasualShadow-Inline.eot');
+    src: local('TT Milks Casual Shadow Inline'), local('TTMilksCasualShadow-Inline'),
+        url('../fonts/TTMilksCasualShadow-Inline.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilksCasualShadow-Inline.woff2') format('woff2'),
+        url('../fonts/TTMilksCasualShadow-Inline.woff') format('woff'),
+        url('../fonts/TTMilksCasualShadow-Inline.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks';
+    src: url('../fonts/TTMilks-DemiBoldItalic.eot');
+    src: local('TT Milks DemiBold Italic'), local('TTMilks-DemiBoldItalic'),
+        url('../fonts/TTMilks-DemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilks-DemiBoldItalic.woff2') format('woff2'),
+        url('../fonts/TTMilks-DemiBoldItalic.woff') format('woff'),
+        url('../fonts/TTMilks-DemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Milks';
+    src: url('../fonts/TTMilks-Thin.eot');
+    src: local('TT Milks Thin'), local('TTMilks-Thin'),
+        url('../fonts/TTMilks-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilks-Thin.woff2') format('woff2'),
+        url('../fonts/TTMilks-Thin.woff') format('woff'),
+        url('../fonts/TTMilks-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks Script';
+    src: url('../fonts/TTMilksScript-ExtraLight.eot');
+    src: local('TT Milks Script ExtraLight'), local('TTMilksScript-ExtraLight'),
+        url('../fonts/TTMilksScript-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilksScript-ExtraLight.woff2') format('woff2'),
+        url('../fonts/TTMilksScript-ExtraLight.woff') format('woff'),
+        url('../fonts/TTMilksScript-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks';
+    src: url('../fonts/TTMilks-MediumItalic.eot');
+    src: local('TT Milks Medium Italic'), local('TTMilks-MediumItalic'),
+        url('../fonts/TTMilks-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilks-MediumItalic.woff2') format('woff2'),
+        url('../fonts/TTMilks-MediumItalic.woff') format('woff'),
+        url('../fonts/TTMilks-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Milks Casual 900 One';
+    src: url('../fonts/TTMilksCasual-900One.eot');
+    src: local('TT Milks Casual 900 One'), local('TTMilksCasual-900One'),
+        url('../fonts/TTMilksCasual-900One.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilksCasual-900One.woff2') format('woff2'),
+        url('../fonts/TTMilksCasual-900One.woff') format('woff'),
+        url('../fonts/TTMilksCasual-900One.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks Casual Pie Base';
+    src: url('../fonts/TTMilksCasualPie-Base.eot');
+    src: local('TT Milks Casual Pie Base'), local('TTMilksCasualPie-Base'),
+        url('../fonts/TTMilksCasualPie-Base.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilksCasualPie-Base.woff2') format('woff2'),
+        url('../fonts/TTMilksCasualPie-Base.woff') format('woff'),
+        url('../fonts/TTMilksCasualPie-Base.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks';
+    src: url('../fonts/TTMilks-ExtraLight.eot');
+    src: local('TT Milks ExtraLight'), local('TTMilks-ExtraLight'),
+        url('../fonts/TTMilks-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilks-ExtraLight.woff2') format('woff2'),
+        url('../fonts/TTMilks-ExtraLight.woff') format('woff'),
+        url('../fonts/TTMilks-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks Script';
+    src: url('../fonts/TTMilksScript-ExtraBold.eot');
+    src: local('TT Milks Script ExtraBold'), local('TTMilksScript-ExtraBold'),
+        url('../fonts/TTMilksScript-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilksScript-ExtraBold.woff2') format('woff2'),
+        url('../fonts/TTMilksScript-ExtraBold.woff') format('woff'),
+        url('../fonts/TTMilksScript-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks';
+    src: url('../fonts/TTMilks-ExtraLightItalic.eot');
+    src: local('TT Milks ExtraLight Italic'), local('TTMilks-ExtraLightItalic'),
+        url('../fonts/TTMilks-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilks-ExtraLightItalic.woff2') format('woff2'),
+        url('../fonts/TTMilks-ExtraLightItalic.woff') format('woff'),
+        url('../fonts/TTMilks-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Milks Casual 700 One';
+    src: url('../fonts/TTMilksCasual-700One.eot');
+    src: local('TT Milks Casual 700 One'), local('TTMilksCasual-700One'),
+        url('../fonts/TTMilksCasual-700One.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilksCasual-700One.woff2') format('woff2'),
+        url('../fonts/TTMilksCasual-700One.woff') format('woff'),
+        url('../fonts/TTMilksCasual-700One.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks Casual 900 Two';
+    src: url('../fonts/TTMilksCasual-900Two.eot');
+    src: local('TT Milks Casual 900 Two'), local('TTMilksCasual-900Two'),
+        url('../fonts/TTMilksCasual-900Two.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilksCasual-900Two.woff2') format('woff2'),
+        url('../fonts/TTMilksCasual-900Two.woff') format('woff'),
+        url('../fonts/TTMilksCasual-900Two.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks Casual Pie Inline';
+    src: url('../fonts/TTMilksCasualPie-Inline.eot');
+    src: local('TT Milks Casual Pie Inline'), local('TTMilksCasualPie-Inline'),
+        url('../fonts/TTMilksCasualPie-Inline.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilksCasualPie-Inline.woff2') format('woff2'),
+        url('../fonts/TTMilksCasualPie-Inline.woff') format('woff'),
+        url('../fonts/TTMilksCasualPie-Inline.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks Casual Shadow Basic';
+    src: url('../fonts/TTMilksCasualShadow-Basic.eot');
+    src: local('TT Milks Casual Shadow Basic'), local('TTMilksCasualShadow-Basic'),
+        url('../fonts/TTMilksCasualShadow-Basic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilksCasualShadow-Basic.woff2') format('woff2'),
+        url('../fonts/TTMilksCasualShadow-Basic.woff') format('woff'),
+        url('../fonts/TTMilksCasualShadow-Basic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks';
+    src: url('../fonts/TTMilks-ThinItalic.eot');
+    src: local('TT Milks Thin Italic'), local('TTMilks-ThinItalic'),
+        url('../fonts/TTMilks-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilks-ThinItalic.woff2') format('woff2'),
+        url('../fonts/TTMilks-ThinItalic.woff') format('woff'),
+        url('../fonts/TTMilks-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Milks';
+    src: url('../fonts/TTMilks-ExtraBold.eot');
+    src: local('TT Milks ExtraBold'), local('TTMilks-ExtraBold'),
+        url('../fonts/TTMilks-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilks-ExtraBold.woff2') format('woff2'),
+        url('../fonts/TTMilks-ExtraBold.woff') format('woff'),
+        url('../fonts/TTMilks-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks Casual Shadow Two';
+    src: url('../fonts/TTMilksCasualShadow-Two.eot');
+    src: local('TT Milks Casual Shadow Two'), local('TTMilksCasualShadow-Two'),
+        url('../fonts/TTMilksCasualShadow-Two.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilksCasualShadow-Two.woff2') format('woff2'),
+        url('../fonts/TTMilksCasualShadow-Two.woff') format('woff'),
+        url('../fonts/TTMilksCasualShadow-Two.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks Casual Shadow One';
+    src: url('../fonts/TTMilksCasualShadow-One.eot');
+    src: local('TT Milks Casual Shadow One'), local('TTMilksCasualShadow-One'),
+        url('../fonts/TTMilksCasualShadow-One.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilksCasualShadow-One.woff2') format('woff2'),
+        url('../fonts/TTMilksCasualShadow-One.woff') format('woff'),
+        url('../fonts/TTMilksCasualShadow-One.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks Casual 700 Two';
+    src: url('../fonts/TTMilksCasual-700Two.eot');
+    src: local('TT Milks Casual 700 Two'), local('TTMilksCasual-700Two'),
+        url('../fonts/TTMilksCasual-700Two.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilksCasual-700Two.woff2') format('woff2'),
+        url('../fonts/TTMilksCasual-700Two.woff') format('woff'),
+        url('../fonts/TTMilksCasual-700Two.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks Casual Pie Shadow';
+    src: url('../fonts/TTMilksCasualPie-Shadow.eot');
+    src: local('TT Milks Casual Pie Shadow'), local('TTMilksCasualPie-Shadow'),
+        url('../fonts/TTMilksCasualPie-Shadow.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilksCasualPie-Shadow.woff2') format('woff2'),
+        url('../fonts/TTMilksCasualPie-Shadow.woff') format('woff'),
+        url('../fonts/TTMilksCasualPie-Shadow.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks Casual Pie Inshadow';
+    src: url('../fonts/TTMilksCasualPie-Inshadow.eot');
+    src: local('TT Milks Casual Pie Inshadow'), local('TTMilksCasualPie-Inshadow'),
+        url('../fonts/TTMilksCasualPie-Inshadow.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilksCasualPie-Inshadow.woff2') format('woff2'),
+        url('../fonts/TTMilksCasualPie-Inshadow.woff') format('woff'),
+        url('../fonts/TTMilksCasualPie-Inshadow.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks Casual Script Two';
+    src: url('../fonts/TTMilksCasualScript-Two.eot');
+    src: local('TT Milks Casual Script Two'), local('TTMilksCasualScript-Two'),
+        url('../fonts/TTMilksCasualScript-Two.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilksCasualScript-Two.woff2') format('woff2'),
+        url('../fonts/TTMilksCasualScript-Two.woff') format('woff'),
+        url('../fonts/TTMilksCasualScript-Two.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks';
+    src: url('../fonts/TTMilks-Bold.eot');
+    src: local('TT Milks Bold'), local('TTMilks-Bold'),
+        url('../fonts/TTMilks-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilks-Bold.woff2') format('woff2'),
+        url('../fonts/TTMilks-Bold.woff') format('woff'),
+        url('../fonts/TTMilks-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks Script';
+    src: url('../fonts/TTMilksScript-Bold.eot');
+    src: local('TT Milks Script Bold'), local('TTMilksScript-Bold'),
+        url('../fonts/TTMilksScript-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilksScript-Bold.woff2') format('woff2'),
+        url('../fonts/TTMilksScript-Bold.woff') format('woff'),
+        url('../fonts/TTMilksScript-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks';
+    src: url('../fonts/TTMilks-DemiBold.eot');
+    src: local('TT Milks DemiBold'), local('TTMilks-DemiBold'),
+        url('../fonts/TTMilks-DemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilks-DemiBold.woff2') format('woff2'),
+        url('../fonts/TTMilks-DemiBold.woff') format('woff'),
+        url('../fonts/TTMilks-DemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks Casual Outline Cow';
+    src: url('../fonts/TTMilksCasualOutline-Cow.eot');
+    src: local('TT Milks Casual Outline Cow'), local('TTMilksCasualOutline-Cow'),
+        url('../fonts/TTMilksCasualOutline-Cow.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilksCasualOutline-Cow.woff2') format('woff2'),
+        url('../fonts/TTMilksCasualOutline-Cow.woff') format('woff'),
+        url('../fonts/TTMilksCasualOutline-Cow.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Milks';
+    src: url('../fonts/TTMilks-Medium.eot');
+    src: local('TT Milks Medium'), local('TTMilks-Medium'),
+        url('../fonts/TTMilks-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTMilks-Medium.woff2') format('woff2'),
+        url('../fonts/TTMilks-Medium.woff') format('woff'),
+        url('../fonts/TTMilks-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
