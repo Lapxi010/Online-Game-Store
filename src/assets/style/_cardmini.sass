@@ -1,0 +1,135 @@
+.cardmini
+  margin-top: 40px
+  border: 1px solid rgba(255,255,255,.4)
+  border-radius: 10px
+  display: flex
+  flex-direction: column
+  max-width: 222px
+  position: relative
+  cursor: pointer
+  &:hover  .cardmini__btn
+    z-index: 100
+    opacity: 1
+    visibility: visible
+  &__love
+    display: block
+    position: absolute
+    right: 8px
+    top: 8px
+    width: 36px
+    height: 36px
+    cursor: pointer
+    visibility: hidden
+    transition: opacity .3s
+    z-index: 10000
+    background-position: 53.6231884057971% 73.27586206896552%
+    opacity: 0
+    &:hover .cardmini__love
+      visibility: visible
+      z-index: 1000
+      opacity: 1
+      background-position: 53.6231884057971% 73.27586206896552%
+      background: url(../../assets/img/icons/arrow.svg) no-repeat
+  &__btn
+    position: absolute
+    top: 50%
+    z-index: 10
+    left: 50%
+    transform: translate(-50%,-50%)
+    opacity: 0
+    visibility: hidden
+    transition: .3s
+    padding: 7px 12px 4px
+    cursor: pointer
+    line-height: 1.2
+    font-weight: 600
+    font-family: "TT Milks",sans-serif
+    display: inline-block
+    background-color: rgb(251, 187, 67)
+    border-radius: 11px
+    color: #000
+    font-size: 16px
+    letter-spacing: .04em
+    text-transform: uppercase
+    outline: none
+    border: none
+    &:hover
+      background: #fff
+  &:hover .cardmini__love
+    background: url(../../assets/img/icons/arrow.svg) no-repeat
+    background-position: 27.536231884057973% 73.27586206896552%
+    z-index: 100
+    opacity: 1
+    visibility: visible
+  &:hover .cardmini__love:hover
+    background-position: 53.6231884057971% 73.27586206896552%
+  &:hover::before
+    background: rgba(0,0,0,.4)
+    border-radius: 11px
+    z-index: 10
+    content: ''
+    width: 100%
+    height: 100%
+    position: absolute
+    left: 0
+    top: 0
+    pointer-events: none
+  &:hover::after
+    border: 1px solid #fbbb43
+    content: ''
+    width: 100%
+    height: 100%
+    position: absolute
+    left: 0
+    top: 0
+    pointer-events: none
+    border-radius: 10px
+    z-index: 200
+  &__img
+    border-radius: 11px 11px 0 0
+    overflow: hidden
+    margin-bottom: 8px
+    transition: .3s
+    position: relative
+    display: block
+    width: 100%
+    -webkit-mask: url(../../assets/img/games/cardshadow.webp) top left/contain
+  &__title
+    margin-bottom: 8px
+    cursor: pointer
+    display: block
+    padding: 0 8px
+    letter-spacing: -.04em
+    min-height: 60px
+    font-family: Montserrat,sans-serif
+    line-height: 1.3
+    text-transform: none
+    text-decoration: none
+    color: #fff
+    font-size: 14px
+    font-weight: 400
+  &__price
+    display: flex
+    align-items: center
+    padding: 0 8px 8px
+    margin: auto 0 0
+    min-height: 33px
+    &-text
+      font-size: 18px
+      line-height: 1.3
+      text-transform: uppercase
+      color: #fff
+      font-family: TT Milks, sans-serif
+      margin-right: 16px
+      font-weight: 600
+    &-sale
+      font-family: TT Milks, sans-serif
+      font-size: 16px
+      line-height: 1
+      text-align: center
+      color: #000
+      background: #fbbb43
+      border-radius: 8px
+      padding: 6px 8px 3px
+      margin: 0 0 0 auto
+      font-weight: 600
