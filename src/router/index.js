@@ -4,6 +4,7 @@ import Basket from "../views/Basket";
 import Catalog from "../views/Catalog";
 import News from "../views/News";
 import Favorite from "../views/Favorite";
+import Game from "../views/Game";
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: '/favorite',
     name: 'Favorite',
     component: Favorite
+  },
+  {
+    path: '/game',
+    name: 'Game',
+    component: Game
   }
 ]
 
