@@ -6,15 +6,37 @@
       <span class="cardmini__price-text">{{item.price}}</span>
       <span class="cardmini__price-sale">{{item.sale}}</span>
     </div>
-    <div class="cardmini__love"></div>
-    <button class="cardmini__btn">В корзину</button>
+    <div class="cardmini__love" @click="showLove"></div>
+    <button @click="goToBasket" class="cardmini__btn">В корзину</button>
   </div>
 </template>
 
 <script>
+import {useRouter} from "vue-router"
+import {useStore} from "vuex"
+
 export default {
   name: "cardmini",
-  props:['num', 'item']
+  props:['num', 'item'],
+  setup(){
+    const router = useRouter()
+    const store = useStore()
+
+    const goToBasket = () => {
+      router.push('/basket')
+    }
+    const showLove = () => {
+      if(store.getters['auth/isAuntificated']){
+        router.push('/favorite')
+      }else{
+        activeModel.value = true
+      }
+    }
+    return {
+      goToBasket,
+      showLove
+    }
+  }
 }
 </script>
 

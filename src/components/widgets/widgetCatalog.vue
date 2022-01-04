@@ -1,25 +1,31 @@
 <template>
-  <div class="compilition">
-    <div class="compilition-wrapper wrapper">
-      <div class="compilition-wrapper__title">
-        <button class="compilition-wrapper__title-btn">Новинки</button>
-      </div>
-      <div class="compilition-wrapper__cards">
-        <cardmini v-for="(item, id) of description" :key="id" :num="id+1" :item="item"></cardmini>
-      </div>
-      <div class="compilition-wrapper wrapper">
-        <button class="stand-btn" @click="$router.push('/catalog')">Смотреть все</button>
+  <div class="widget-login">
+    <div class="widget-catalog__overlay">
+      <div class="widget-catalog__container">
+        <div class="widget-catalog__content">
+          <div class="widget-catalog__search">
+            <div class="widget-catalog__title">
+              результаты поиска:
+              <span class="widget-catalog__title__sup">1829</span>
+            </div>
+            <div class="widget-catalog__modal">
+              <div class="widget-catalog__cards">
+                <cardmini v-for="(item, id) of description" :key="id" :num="id+1" :item="item"></cardmini>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import cardmini from "./cards/cardmini"
+import cardmini from "../cards/cardmini"
 
 export default {
-  name: "TheCompilition",
   components:{cardmini},
+  name: "widgetCatalog",
   setup(){
     const description = [
       {name:'Endless Space 2 – Dark Matter',price:'65 ₽',sale:'18%'},

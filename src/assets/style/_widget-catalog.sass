@@ -1,0 +1,59 @@
+.widget-catalog
+  &__overlay
+    content: ''
+    z-index: -1
+    position: absolute
+    left: calc(6.25% *3 + 48px - 5%)
+    top: 0
+    display: block
+    background: rgba(0,0,0,.9)
+    min-height: 100vh
+    width: calc(100% + 25px)
+  &__container
+    height: 100%
+    padding-bottom: 0
+    width: calc(6.25%*11 - (48px*2))
+    overflow: initial
+    position: absolute
+    min-height: calc(100vh - 125px)
+    top: 125px
+    left: 50px
+    color: #fff
+    z-index: 100
+    max-height: 100%
+  &__content
+    padding-bottom: 0
+    height: 100%
+  &__search
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+  &__title
+    padding-bottom: 22px
+    color: #fff
+    letter-spacing: .04em
+    font-family: TT Milks,sans-serif
+    font-size: 18px
+    line-height: 1.3
+    text-transform: uppercase
+    font-weight: 600
+    &__sup
+      color: #fbbb43
+      letter-spacing: .04em
+      font-family: TT Milks,sans-serif
+      font-size: 18px
+      line-height: 1.3
+      text-transform: uppercase
+      font-weight: 600
+  &__modal
+    position: relative
+    overflow: hidden !important
+    overflow-anchor: none
+    touch-action: auto
+  &__cards
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+    margin-left: -12px
+    margin-bottom: 80px

@@ -1,0 +1,72 @@
+.footer
+  width: 100vw
+  background: $main-background-color
+  &-copyright
+    display: flex
+    justify-content: flex-start
+    width: 100%
+    align-items: center
+    &-policy
+      &-title
+        font-size: 13px
+        color: rgba(255,255,255,.4)
+        font-family: Montserrat,sans-serif
+        line-height: 1.3
+      &-desc
+        font-size: 13px
+        color: rgba(255,255,255,.4)
+        font-family: Montserrat,sans-serif
+        line-height: 1.3
+        margin-left: 60px
+        text-decoration: none
+        text-transform: none
+    &-payment
+      display: flex
+      align-items: center
+      margin-left: 60px
+      &__item
+        margin: 0 30px
+  &-wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: relative
+    padding: 40px 0 0
+    &:before
+      content: ''
+      position: absolute
+      width: 100%
+      height: 1px
+      top: 0
+      left: 0
+      background-color: #fbbb43
+      -webkit-box-shadow: 0 0 4px rgba(251,187,67,.3)
+      box-shadow: 0 0 4px rgba(251,187,67,.3)
+  &-social
+    display: flex
+    width: 100%
+    flex-direction: row
+    justify-content: center
+    margin-bottom: 55px
+    &__link
+      transition: all .3s
+      &-img
+        fill: white
+        transition: all .3s
+        &:hover
+          fill: #fbbb43
+    &__link-vk
+      margin: 0 24px 0 0
+      transition: all .3s
+      &:hover .footer-social__link-img
+        fill: #fbbb43
+    &__link-tel
+      margin: 0 24px
+      transition: all .3s
+      &:hover .footer-social__link-img
+        fill: #fbbb43
+    &__link-discord
+      margin: 0 0 0 24px
+      transition: all .3s
+      &:hover .footer-social__link-img
+        fill: #fbbb43
