@@ -9,15 +9,17 @@
 
 <script>
 import {useRouter} from "vue-router"
+import {useStore} from "vuex"
 
 export default {
   name: "sliderItemDesk",
   props:['description', 'currentPos'],
   setup(){
     const router = useRouter()
+    const store = useStore()
 
     const goToBasket = () => {
-      router.push('/basket')
+      console.log('hi')
     }
 
     return {

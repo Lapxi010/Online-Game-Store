@@ -1,31 +1,26 @@
 <template>
   <TheBreadcrumbs :breads="breads"></TheBreadcrumbs>
-  <cardbiggame :data="data[0]"></cardbiggame>
+  <cardbiggame :data="data"></cardbiggame>
 </template>
 
 <script>
 import TheBreadcrumbs from "../components/TheBreadcrumbs"
 import cardbiggame from "../components/cards/cardbiggame"
+import {useStore} from "vuex"
 
 export default {
   name: "Game",
   components:{TheBreadcrumbs,cardbiggame},
+
   setup(){
+    const store = useStore()
+
+    const data = store.getters['basket/getCurrentGame']
 
     const breads = [
       {name:'Главная',path:'/'},
       {name:'Каталог игр',path:'#'},
-      {name:'SCARF',path:'#'}
-    ]
-
-    const data = [
-      {
-        img: 'game1.webp',
-        name: 'SCARF',
-        currentPrice:529,
-        oldPrice:629,
-        sale:'-16%'
-      }
+      {name:data.title,path:'#'}
     ]
 
     return {

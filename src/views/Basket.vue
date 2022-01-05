@@ -2,14 +2,14 @@
   <TheBreadcrumbs :breads="breads"></TheBreadcrumbs>
       <div class="basket">
         <div class="limit">
-        <div class="basket__wrapper" v-if="desc.length !== 0">
+        <div class="basket__wrapper" v-if="basket.length !== 0">
           <div class="basket__wrapper__left__side">
             <h1 class="basket__wrapper__left__side__title">
               Мой заказ
-              <span class="basket__wrapper__left__side__title__count">{{desc.length}}</span>
+              <span class="basket__wrapper__left__side__title__count">{{basket.length}}</span>
             </h1>
             <div class="basket__wrapper__list">
-              <cardminibasket v-for="(item, id) of desc" :key="id" :data="item"></cardminibasket>
+              <cardminibasket @removeGame="removeGame(id)" v-for="(item, id) of basket" :key="id" :data="item"></cardminibasket>
             </div>
             <div class="basket__wrapper__left__side__payment">
               <h2 class="basket__wrapper__left__side__payment__title">оплата заказа</h2>
@@ -67,17 +67,20 @@
 import TheBreadcrumbs from "../components/TheBreadcrumbs"
 import {ref} from "vue";
 import cardminibasket from "../components/cards/cardminibasket"
+import {useStore} from "vuex"
 
 export default {
   name: "Basket",
   components:{TheBreadcrumbs, cardminibasket},
   setup(){
     const checkbox = ref(true)
+    const store = useStore()
 
-    const desc = [
-      {name:'Scarf',img:'game1.webp',currentPrice:529,oldPrice:629,sale:'-16%',detailGe:'Россия и СНГ',detailAct:'Steam'},
-      {name:'Scarf',img:'game1.webp',currentPrice:529,oldPrice:629,sale:'-16%',detailGe:'Россия и СНГ',detailAct:'Steam'},
-    ]
+    const basket = store.getters['basket/getBasket']
+
+    const removeGame = (data) => {
+      store.commit('basket/removeGood', data)
+    }
 
     const breads = [
       {name:'Главная',path:'/'},
@@ -86,7 +89,7 @@ export default {
 
     const sum = () => {
       let summa = 0
-      for(let i of desc){
+      for(let i of basket){
         summa += i.currentPrice
       }
 
@@ -95,9 +98,10 @@ export default {
 
     return{
       checkbox,
-      desc,
+      basket,
       sum,
-      breads
+      breads,
+      removeGame
     }
   }
 }

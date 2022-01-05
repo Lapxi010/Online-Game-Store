@@ -4,7 +4,7 @@
       <div class="slideritemGame__container__item">
         <div class="slideritemGame__container__item__img">
           <a class='slideritemGame__container__item__img__link' href="#">
-            <img class='slideritemGame__container__item__img__link__img' :src="require(`../../assets/img/screns/screen${num}.jpg`)" alt="dass">
+            <img class='slideritemGame__container__item__img__link__img' :src="require(`../../assets/img/games/${name}/Screen${num}.jpg`)" alt="dass">
           </a>
         </div>
       </div>
@@ -15,7 +15,7 @@
 <script>
 export default {
   name: "sliderItemGame",
-  props:['num']
+  props:['num','name']
 }
 </script>
 
