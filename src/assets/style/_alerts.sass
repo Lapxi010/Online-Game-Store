@@ -1,0 +1,44 @@
+.alert
+  position: fixed
+  right: 48px
+  top: 100px
+  background: $main-background-color
+  width: 300px
+  height: 50px
+  border-radius: 10px
+  z-index: 10033
+  font-size: 20px
+  font-family: "TT Milks", sans-serif
+  opacity: 1
+  display: flex
+  align-items: center
+  transition: 0.1s
+  padding: 0 0 0 20px
+  &__error
+    color: red
+    border: 2px solid red
+  &__love
+    width: 330px
+    color: #ff5858
+    border: 2px solid #ff5858
+  &__success
+    color: lightgreen
+    border: 2px solid lightgreen
+    &__img
+      margin-left: 5px
+.fade-enter-to
+  top: 100px
+  opacity: 1
+.fade-enter-from
+  top: 50px
+  opacity: 0
+.fade-enter-active
+  transition: 0.3s
+.fade-leave-to
+  top: 150px
+  opacity: 0
+.fade-leave-from
+  top: 100px
+  opacity: 1
+.fade-leave-active
+  transition: 0.5s

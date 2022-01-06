@@ -8,13 +8,15 @@
 import slider from "../components/sliders/slider"
 import TheCompilition from "../components/TheCompilition"
 import TheNews from "../components/TheNews"
-import {f} from "../store/data"
+import {useStore} from "vuex"
 
 export default {
   name: 'Home',
   components:{slider, TheCompilition, TheNews},
   setup(){
-    const data = f()
+    const store = useStore()
+
+    const data = store.dispatch("data)
 
     return {
      data

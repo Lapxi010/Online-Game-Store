@@ -1,4 +1,7 @@
 <template>
+  <transition name="fade">
+    <alert__success v-if="alert">Успешно удалено из корзины!</alert__success>
+  </transition>
   <TheBreadcrumbs :breads="breads"></TheBreadcrumbs>
       <div class="basket">
         <div class="limit">
@@ -68,11 +71,13 @@ import TheBreadcrumbs from "../components/TheBreadcrumbs"
 import {ref} from "vue";
 import cardminibasket from "../components/cards/cardminibasket"
 import {useStore} from "vuex"
+import alert__success from "../components/alerts/alert__success"
 
 export default {
   name: "Basket",
-  components:{TheBreadcrumbs, cardminibasket},
+  components:{TheBreadcrumbs, cardminibasket, alert__success},
   setup(){
+    const alert = ref(false)
     const checkbox = ref(true)
     const store = useStore()
 
@@ -80,12 +85,18 @@ export default {
 
     const removeGame = (data) => {
       store.commit('basket/removeGood', data)
+      showAlert()
     }
 
     const breads = [
       {name:'Главная',path:'/'},
       {name:'Ваша корзина',path:'#'}
     ]
+
+    const showAlert = ()=> {
+      alert.value = true
+      setTimeout(()=>{alert.value = false}, 1000)
+    }
 
     const sum = () => {
       let summa = 0
@@ -101,7 +112,9 @@ export default {
       basket,
       sum,
       breads,
-      removeGame
+      removeGame,
+      alert,
+      showAlert
     }
   }
 }

@@ -1,4 +1,13 @@
 <template>
+  <transition name="fade">
+    <alert__error v-if="alertError">Необходимо авторизоваться!</alert__error>
+  </transition>
+  <transition name="fade">
+    <alert__love v-if="alertLove">Успешно добавлено в избранное!</alert__love>
+  </transition>
+  <transition name="fade">
+    <alert__success v-if="alert">Успешно добавлено в корзину!</alert__success>
+  </transition>
   <div class="catalog">
     <div class="limit">
       <div class="game__wrapper">
@@ -134,32 +143,61 @@
 <script>
 import sliderGame from "../../components/sliders/sliderGame"
 import {useStore} from "vuex"
+import {ref} from "vue"
+import alert__love from "../alerts/alert__love"
+import alert__success from "../alerts/alert__success"
+import alert__error from "../alerts/alert__error"
 
 export default {
   name: "cardbiggame",
-  components:{sliderGame},
+  components:{sliderGame,alert__love, alert__success,alert__error},
   props:['data'],
   setup(props){
+    const alert = ref(false)
     const date = props.data
     const store = useStore()
+    const alertLove = ref(false)
+    const alertError = ref(false)
 
     const genre = date.genre.split(',')
 
+    const showAlert = ()=> {
+      alert.value = true
+      setTimeout(()=>{alert.value = false}, 1000)
+    }
+
+    const showAlertLove = ()=> {
+      alertLove.value = true
+      setTimeout(()=>{alertLove.value = false}, 1000)
+    }
+
+
+    const showAlertError = ()=> {
+      alertError.value = true
+      setTimeout(()=>{alertError.value = false}, 1000)
+    }
+
     const goToBasket = () => {
       store.commit('basket/addGood',date)
+      showAlert()
     }
     const showLove = () => {
       if(store.getters['auth/isAuntificated']){
         store.commit('favorite/addFavorite', date)
+        showAlertLove()
       }else{
-        activeModel.value = true
+        showAlertError()
       }
     }
     return {
       date,
       goToBasket,
       genre,
-      showLove
+      showLove,
+      alert,
+      showAlert,
+      alertLove,
+      alertError
     }
   }
 }

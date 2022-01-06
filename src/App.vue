@@ -7,9 +7,18 @@
 <script>
 import TheNavbar from "./components/TheNavbar"
 import TheFooter from "./components/TheFooter"
+import alert__success from "./components/alerts/alert__success"
+import {useStore} from "vuex"
+import {onMounted} from "vue"
 
 export default {
-  components:{TheNavbar, TheFooter}
+  components:{TheNavbar, TheFooter, alert__success},
+  setup(){
+    const store = useStore()
+    onMounted(()=>{
+      store.dispatch('data/getAll')
+    })
+  }
 }
 </script>
 

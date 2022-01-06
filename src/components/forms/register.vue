@@ -65,9 +65,11 @@ export default {
           emit('closeModel')
         }catch (e) {
           errorMain.value = true
+          console.log(e)
         }
       }else {
         errorMain.value = true
+        console.log(1)
       }
     })
 

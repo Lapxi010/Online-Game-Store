@@ -26,7 +26,6 @@ export default {
   name: "Catalog",
   components:{TheBreadcrumbs,cardmini},
   setup(){
-    const data = f()
 
     const breads = [
       {name:'Главная',path:'/'},

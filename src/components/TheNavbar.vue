@@ -29,7 +29,7 @@
           <button class="navbar-search__btn"></button>
         </div>
         <div class="navbar-navigate">
-          <button v-if="!loginNavbar" :class="['navbar-navigate__btn', {'navbar-navigate__btn__active': activeModel}]" @click="activeModel = !activeModel">Войти</button>
+          <button v-if="!loginNavbar" :class="['navbar-navigate__btn', {'navbar-navigate__btn__active': activeModel}]" @click="closeAm">Войти</button>
           <svg v-else class="navbar-navigate__img" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
             <path d="M0 0h24v24H0V0z" fill="none"/>
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.07 18.28c.43-.9 3.05-1.78 4.93-1.78s4.51.88 4.93 1.78C15.57 19.36 13.86 20 12 20s-3.57-.64-4.93-1.72zm11.29-1.45c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33C4.62 15.49 4 13.82 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.49-1.64 4.83zM12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"/>
@@ -44,7 +44,7 @@
           </svg>
         </div>
       </div>
-      <widget-login v-if="activeModel" @closeModel="activeModel = !activeModel" @onchangeNavbar="changeNavbar"></widget-login>
+      <widget-login v-if="activeModel" @closeModel="closeAm" @onchangeNavbar="changeNavbar"></widget-login>
 <!--      <widget-catalog></widget-catalog>-->
     </div>
   </div>
@@ -53,7 +53,7 @@
 <script>
 import widgetLogin from "./widgets/widgetLogin"
 import widgetCatalog from "./widgets/widgetCatalog"
-import {ref} from "vue"
+import {reactive, ref} from "vue"
 import {useStore} from "vuex"
 import {useRouter} from "vue-router"
 
@@ -64,11 +64,12 @@ export default {
     const store = useStore()
     const router = useRouter()
 
-    const activeModel = ref(false)
+    const activeModel = ref(store.getters['auth/getActiveModel'])
     const loginNavbar = ref(store.getters['auth/isAuntificated'])
 
     const changeNavbar = ()=>{
-      activeModel.value = !activeModel.value
+      store.commit('auth/changeActiveModel')
+      activeModel.value = store.getters['auth/getActiveModel']
       loginNavbar.value = true
     }
 
@@ -76,7 +77,8 @@ export default {
       if(store.getters['auth/isAuntificated']){
         router.push('/favorite')
       }else{
-        activeModel.value = true
+        store.commit('auth/activeModelTrue')
+        activeModel.value = store.getters['auth/getActiveModel']
       }
     }
 
@@ -84,12 +86,18 @@ export default {
       router.push('/basket')
     }
 
+    const closeAm = () => {
+      store.commit('auth/changeActiveModel')
+      activeModel.value = store.getters['auth/getActiveModel']
+    }
+
     return {
       activeModel,
       changeNavbar,
       loginNavbar,
       showLove,
-      goToBasket
+      goToBasket,
+      closeAm
     }
   },
   components:{widgetLogin,widgetCatalog}
