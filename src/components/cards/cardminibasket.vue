@@ -1,6 +1,6 @@
 <template>
   <div class="cardminibasket">
-    <img @click='goToGame' :src="require(`../../assets/img/games/${data.img}/Title.webp`)" alt="da" class="cardminibasket__img">
+    <img @click='goToGame' :src="data.titleImg" alt="da" class="cardminibasket__img">
     <div class="cardminibasket__content">
       <div class="cardminibasket__content__title">
         <div class="cardminibasket__content__title__head">{{data.title}}</div>

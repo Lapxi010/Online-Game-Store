@@ -9,7 +9,7 @@
     <alert__success v-if="alert">Успешно добавлено в корзину!</alert__success>
   </transition>
   <div class="cardmini">
-    <img @click="goToGame" class="cardmini__img" :src="require(`../../assets/img/games/${item.img}/Title.webp`)" alt="logo">
+    <img @click="goToGame" class="cardmini__img" :src="item.titleImg" alt="logo">
     <a href="#" class="cardmini__title">{{item.title}}</a>
     <div class="cardmini__price">
       <span class="cardmini__price-text">{{item.currentPrice}} ₽</span>

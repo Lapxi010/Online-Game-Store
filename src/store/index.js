@@ -3,6 +3,7 @@ import auth from "./modules/auth"
 import basket from "./modules/basket"
 import favorite from "./modules/favorite"
 import data from "./modules/data"
+import admin from './modules/admin'
 
 export default createStore({
   state: {
@@ -15,6 +16,7 @@ export default createStore({
     auth,
     basket,
     favorite,
-    data
+    data,
+    admin
   }
 })

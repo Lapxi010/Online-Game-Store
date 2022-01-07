@@ -15,8 +15,8 @@ export default {
   components:{TheNavbar, TheFooter, alert__success},
   setup(){
     const store = useStore()
-    onMounted(()=>{
-      store.dispatch('data/getAll')
+    onMounted(async ()=>{
+      await store.dispatch('data/getAll')
     })
   }
 }

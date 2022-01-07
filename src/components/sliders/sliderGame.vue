@@ -4,7 +4,7 @@
       <div class="sliderGame__wrapper__content__slider">
         <div class="sliderGame__wrapper__content__slider__list">
           <div class="sliderGame__wrapper__content__slider__list__track" :style="`transform: translate3d(${-754 * currentPos}px,0px,0px)`">
-            <slider-item-game v-for="item of data.countImg" :key="item" :name="data.img"  :num="item"></slider-item-game>
+            <slider-item-game v-for="item of data.screens" :key="item" :name="item" ></slider-item-game>
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@ export default {
   },
   methods:{
     prevSlide(){
-      if(this.currentPos < this.data.countImg){
+      if(this.currentPos < this.data.screens.length){
         this.disableRight =  false
       }
       if (this.currentPos > 0){
@@ -48,7 +48,7 @@ export default {
       if(this.currentPos ===0){
         this.disableLeft = false
       }
-      if(this.currentPos > this.data.countImg-2){
+      if(this.currentPos > this.data.screens.length-2){
         this.disableRight = true
         console.log(this.currentPos)
       }else{

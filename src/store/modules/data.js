@@ -15,15 +15,21 @@ export default {
         async createdb({commit}, payload){
             await firebase.database().ref('games').push(payload)
         },
-        async getAll({commit,state},payload){
-            const data = await firebase.database().ref('games').get().then(value =>
-                state.data = value.val()
+        async getAll({commit,state}){
+            const data = await firebase.database().ref('games').get().then(value => {
+                    const m = value.val()
+                    const newm = []
+                    Object.keys(m).map((item) => {
+                        newm.push({id: item, ...m[item]})
+                    })
+                    state.data = newm
+                }
             )
         }
     },
     getters:{
         getData(state){
-
+            return state.data
         }
     }
 }

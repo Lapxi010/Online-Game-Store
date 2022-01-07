@@ -20,12 +20,22 @@
 <script>
 import TheBreadcrumbs from "../components/TheBreadcrumbs"
 import cardmini from "../components/cards/cardmini"
-import {f} from "../store/data"
+import {useStore} from "vuex"
+import {computed, onMounted} from "vue";
 
 export default {
   name: "Catalog",
   components:{TheBreadcrumbs,cardmini},
   setup(){
+    const store = useStore()
+
+    onMounted(async () => {
+      await store.dispatch("data/getAll")
+    })
+
+    const data = computed(()=> store.getters['data/getData'])
+    console.log(data.value.target)
+
 
     const breads = [
       {name:'Главная',path:'/'},

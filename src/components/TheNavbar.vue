@@ -53,7 +53,7 @@
 <script>
 import widgetLogin from "./widgets/widgetLogin"
 import widgetCatalog from "./widgets/widgetCatalog"
-import {reactive, ref} from "vue"
+import {onMounted, reactive, ref} from "vue"
 import {useStore} from "vuex"
 import {useRouter} from "vue-router"
 

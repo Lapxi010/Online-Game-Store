@@ -14,7 +14,7 @@
         <div class="game">
           <div class="game__left__side">
             <div class="game__left__side__container">
-              <img class="game__left__side__container__img" :src="require(`../../assets/img/games/${data.img}/Title.webp`)" alt="logo">
+              <img class="game__left__side__container__img" :src="data.titleImg" alt="logo">
             </div>
           </div>
           <div class="game__right__side">
