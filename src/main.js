@@ -19,7 +19,7 @@ let config = {
     messagingSenderId: "1037171651808",
     appId: "1:1037171651808:web:ee2a48f75430d17d12cc85"
 }
-
+// создание подклбчения к firebase
 firebase.initializeApp(config)
 
 
