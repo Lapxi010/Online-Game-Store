@@ -24,7 +24,7 @@
                       завершения
                       процедуры оплаты.
                     </div>
-                    <button class="stand-btn" :disabled="!checkbox">оплатить {{sum()}} ₽</button>
+                    <button class="stand-btn btn-in-payment" :disabled="!checkbox">оплатить {{sum()}} ₽</button>
                   </div>
                 </div>
               </div>

@@ -30,7 +30,7 @@
       </div>
       <div class="footer-copyright">
         <div class="footer-copyright-policy">
-          <span class="footer-copyright-policy-title">© 2014-2022 GabeStore</span>
+          <span class="footer-copyright-policy-title">© 2021-2022 LapxiStore</span>
           <a href="#" class="footer-copyright-policy-desc">Правовая информация</a>
         </div>
         <div class="footer-copyright-payment">

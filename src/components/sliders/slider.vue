@@ -1,20 +1,22 @@
 <template>
-  <div class="model">
-    <div :class="[{'model-carousel':!corousel}, {'model-carousel2': corousel }]" :style="{'transform': 'translateY('+'-' + (100*currentPos)+'vh'+')'}">
-      <slider-item v-for="(item, id) of imgs" :item="id+1" :key="id" :img="item" :cur="currentPos"></slider-item>
-    </div>
-  </div>
-  <div class="wrapper model-promo">
-    <div class="model-promo__progress">
-      <div class="model-promo__progress-btn model-promo__progress-btn--up" @click="prevSlide"></div>
-      <div class="model-promo__progress-bar">
-        <div class="model-promo__progress-bar__value" :style="{'top':16.6 * currentPos + '%'}"></div>
+  <div class="model__wrapper">
+    <div class="model">
+      <div :class="[{'model-carousel':!corousel}, {'model-carousel2': corousel }]" :style="{'transform': 'translateY('+'-' + (100*currentPos)+'vh'+')'}">
+        <slider-item v-for="(item, id) of imgs" :item="id+1" :key="id" :img="item" :cur="currentPos"></slider-item>
       </div>
-      <div class="model-promo__progress-btn model-promo__progress-btn--down" @click="nextSlide"></div>
     </div>
+    <div class="wrapper model-promo">
+      <div class="model-promo__progress">
+        <div class="model-promo__progress-btn model-promo__progress-btn--up" @click="prevSlide"></div>
+        <div class="model-promo__progress-bar">
+          <div class="model-promo__progress-bar__value" :style="{'top':16.6 * currentPos + '%'}"></div>
+        </div>
+        <div class="model-promo__progress-btn model-promo__progress-btn--down" @click="nextSlide"></div>
+      </div>
       <div class="model-promo__description">
-          <slider-item-desk  :description="description" :current-pos="currentPos"></slider-item-desk>
+        <slider-item-desk  :description="description" :current-pos="currentPos"></slider-item-desk>
       </div>
+    </div>
   </div>
 </template>
 
