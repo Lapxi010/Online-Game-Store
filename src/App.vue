@@ -14,7 +14,7 @@ import {onMounted} from "vue"
 export default {
   components:{TheNavbar, TheFooter, alert__success},
   setup(){
-    console.log('Получение данных из бд')
+    console.log('Получение данных из бдп')
     const store = useStore()
     onMounted(async ()=>{
       await store.dispatch('data/getAll')
