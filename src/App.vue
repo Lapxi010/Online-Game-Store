@@ -24,5 +24,7 @@ export default {
 </script>
 
 <style lang="scss">
-
+.lp{
+  border:1px solid black;
+}
 </style>
