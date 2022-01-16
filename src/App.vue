@@ -26,5 +26,6 @@ export default {
 <style lang="scss">
 .lp{
   border:1px solid black;
+  background: black;
 }
 </style>
