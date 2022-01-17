@@ -6,6 +6,9 @@ import News from "../views/News";
 import Favorite from "../views/Favorite";
 import Game from "../views/Game";
 import Admin from "../views/Admin";
+import SuccesPay from "../views/SuccesPay";
+import ErrorPay from "../views/ErrorPay";
+import User from "../views/User";
 
 const routes = [
   {
@@ -42,6 +45,21 @@ const routes = [
     path: '/admin',
     name: 'Admin',
     component: Admin
+  },
+  {
+    path: '/success',
+    name: 'Success',
+    component: SuccesPay
+  },
+  {
+    path: '/error',
+    name: 'Error',
+    component: ErrorPay
+  },
+  {
+    path: '/user',
+    name: 'User',
+    component: User
   }
 ]
 

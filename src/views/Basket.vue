@@ -24,7 +24,14 @@
                       завершения
                       процедуры оплаты.
                     </div>
-                    <button class="stand-btn btn-in-payment" :disabled="!checkbox">оплатить {{sum()}} ₽</button>
+                    <form name="payment" method="post" action="https://sci.interkassa.com/" accept-charset="UTF-8">
+                      <input type="hidden" name="ik_co_id" value="61e46e07c71d26196b3957f3"/>
+                      <input type="hidden" name="ik_pm_no" :value="Date.now()"/>
+                      <input type="hidden" name="ik_am" :value="sum()"/>
+                      <input type="hidden" name="ik_cur" value="RUB"/>
+                      <input type="hidden" name="ik_desc" value="Payment Description"/>
+                      <button type="submit" class="stand-btn btn-in-payment" :disabled="!checkbox">оплатить {{sum()}} ₽</button>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -72,6 +79,7 @@ import {ref} from "vue";
 import cardminibasket from "../components/cards/cardminibasket"
 import {useStore} from "vuex"
 import alert__success from "../components/alerts/alert__success"
+import MD5 from "crypto-js/md5"
 
 export default {
   name: "Basket",
@@ -80,8 +88,18 @@ export default {
     const alert = ref(false)
     const checkbox = ref(true)
     const store = useStore()
+    const dataset = ref([])
+
+    dataset.value.push('xVCt36swSWTzN1SG')
+
+    const key = MD5(':xVCt36swSWTzN1SG')
+
+    const sign = btoa(key)
+
+    console.log(sign)
 
     const basket = store.getters['basket/getBasket']
+
 
     const removeGame = (data) => {
       store.commit('basket/removeGood', data)
@@ -114,7 +132,8 @@ export default {
       breads,
       removeGame,
       alert,
-      showAlert
+      showAlert,
+      sign
     }
   }
 }

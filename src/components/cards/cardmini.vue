@@ -40,6 +40,7 @@ export default {
     const alertError = ref(false)
 
     const goToGame = () => {
+      // const data = props.item.then()
       store.commit('basket/changeCurrentGame', props.item)
       router.push('game')
     }
