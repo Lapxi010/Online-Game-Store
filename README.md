@@ -1,5 +1,7 @@
 # game-shop
 
+This is final project in nine class
+
 ## Project setup
 ```
 npm install
