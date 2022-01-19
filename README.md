@@ -1,6 +1,6 @@
 # game-shop
 
-This is final project in nine class
+This is final project in nine classs
 
 ## Project setup
 ```
